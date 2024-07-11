@@ -10,6 +10,7 @@ export class Counter2Component {
   public readonly countChange = output<number>();
 
   constructor() {
+    // maybe provide a shorthand `bindSignalToOutput(this.count, this.countChange)`?
     effect(() => {
       this.countChange.emit(this.count());
     });

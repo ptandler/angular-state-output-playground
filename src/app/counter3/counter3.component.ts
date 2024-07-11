@@ -8,6 +8,8 @@ import { Component, input, WritableSignal } from "@angular/core";
   </button>`,
 })
 export class Counter3Component {
+  // I don't like that `countSignal` is a `WritableSignal` and could be modified outside of this component,
+  // and it's not so intuitive that you have a signal inside a signal.
   public readonly countSignal = input.required<WritableSignal<number>>();
 
   increment() {
