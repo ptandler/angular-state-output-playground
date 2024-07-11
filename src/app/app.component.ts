@@ -7,7 +7,7 @@ import { Parent3Component } from "./counter3/parent3.component";
   selector: "app-root",
   standalone: true,
   template: `
-    <h1>Welcome to {{ title }}!</h1>
+    <h1>How do I pass state from a component to its parent?</h1>
     <app-parent1 />
     <app-parent2 />
     <app-parent3 />
