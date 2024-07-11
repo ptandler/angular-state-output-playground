@@ -8,8 +8,11 @@ I implemented 4 versions so far:
    - This was my initial idea I proposed as [feature request](https://github.com/angular/angular/issues/56923)
 2. Define a `countChange` output and use an `effect` to emit whenever the count changes
 3. Pass a signal to be used for the output as input to the child component
-4. Provide a public read-only signal in the child component and access this via reference to the child component from its parent  
+   - not sure if this is an approach one would recommend, feels a bit strange and does not prevent that the parent modifies the signal as well
+4. Provide a public read-only signal in the child component and access this via reference to the child component from its parent
+   - actually this approach is quite elegant, however, wiring things together could benefit from some syntactic sugar.
 
+I didn't implement a version with a shared service, which is definitively a good choice if the state is a bit more complex and / or does not really belong logically to the child component.
 
 ## Development server
 
