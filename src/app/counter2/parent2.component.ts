@@ -6,7 +6,10 @@ import { Counter2Component } from "./counter2.component";
   standalone: true,
   imports: [Counter2Component],
   template: `<div style="border: 2px solid gray; padding: 16px; margin: 16px">
-    <h2>Version 2: countChange output and using an effect to emit changes</h2>
+    <h2>
+      Version 2: countChange output and using an <code>effect</code> to emit
+      changes
+    </h2>
     <app-counter2
       (countChange)="parentCount.set($event)"
       style="margin: 16px"
