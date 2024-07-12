@@ -30,6 +30,12 @@ export class Counter2Component {
       Version 2: countChange output and using an <code>effect</code> to emit
       changes
     </h2>
+    <p>
+      This is similar to version 1. Version 1 appears more direct for me, as you
+      can directly see where the output is generated from. The
+      <code>effect</code> is "hidden" inside the constructor and not directly
+      assigned to the output.
+    </p>
     <app-counter2 (countChange)="parentCount.set($event)" class="counter" />
     Parent Count: {{ parentCount() }}
   </div>`,

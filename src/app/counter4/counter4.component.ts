@@ -24,6 +24,10 @@ export class Counter4Component {
   imports: [Counter4Component],
   template: `<div class="example">
     <h2>Version 4: Access the signal of the child component.</h2>
+    <p>
+      Actually this approach is quite elegant, I like it. However, wiring things
+      together could benefit from some syntactic sugar.
+    </p>
     <app-counter4 #counter4 class="counter" />
     Parent Count: {{ parentCount() }}
   </div>`,

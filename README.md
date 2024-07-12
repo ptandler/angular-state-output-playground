@@ -11,6 +11,10 @@ I implemented 4 versions so far:
    - not sure if this is an approach one would recommend, feels a bit strange and does not prevent that the parent modifies the signal as well
 4. Provide a public read-only signal in the child component and access this via reference to the child component from its parent
    - actually this approach is quite elegant, however, wiring things together could benefit from some syntactic sugar.
+5. Use a service to share counter state between child and parent
+   - Also, a quite elegant solution. However, is there a way to ensure that only the child component may modify the shared state?
+   - Another drawback is, that it's not straightforward if parent wants to use multiple instances of the child. They all would share the same state.
+     (Or you could extend the service that is supports multiple counter and use IDs, but this feels quite complicated for a state that logically belongs to the child.)
 
 I didn't implement a version with a shared service, which is definitively a good choice if the state is a bit more complex and / or does not really belong logically to the child component.
 

@@ -26,6 +26,11 @@ export class Counter3Component {
       Version 3: Pass a signal to be used for the output as input to the child
       component.
     </h2>
+    <p>
+      Not sure if this is an approach I would recommend, feels a bit strange and
+      does not prevent that the parent modifies the signal as well - which is a
+      design goal in this example.
+    </p>
     <app-counter3 [countSignal]="parentCount" class="counter" />
     Parent Count: {{ parentCount() }}
   </div>`,
