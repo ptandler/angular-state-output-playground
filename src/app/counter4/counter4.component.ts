@@ -22,9 +22,9 @@ export class Counter4Component {
   selector: "app-parent4",
   standalone: true,
   imports: [Counter4Component],
-  template: ` <div style="border: 2px solid gray; padding: 16px; margin: 16px">
+  template: `<div class="example">
     <h2>Version 4: Access the signal of the child component.</h2>
-    <app-counter4 #counter4 style="margin: 16px" />
+    <app-counter4 #counter4 class="counter" />
     Parent Count: {{ parentCount() }}
   </div>`,
 })
